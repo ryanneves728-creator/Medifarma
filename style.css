@@ -1,167 +1,299 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #4d4e76;
-}
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+} 
 
-.cabecalho {
-    background-color: #1325ee;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-}
+body { 
+    font-family: 'Inter', system-ui, -apple-system, sans-serif; 
+    background-color: #f4f5f8; 
+    color: #1e293b;
+    -webkit-font-smoothing: antialiased;
+} 
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-}
 
-.menu-navegacao a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-    font-weight: bold;
-}
+.cabecalho { 
+    background-color: #ffffff; 
+    color: #0f172a; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 20px 40px; 
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); 
+} 
 
-.menu-navegacao a:hover {
-    text-decoration: underline;
-}
+.logo { 
+    font-size: 22px; 
+    font-weight: 800; 
+    color: #2563eb; 
+    letter-spacing: -0.5px;
+} 
 
-.hero {
-    padding: 40px 20px;
-}
+.menu-navegacao a { 
+    color: #475569; 
+    text-decoration: none; 
+    margin-left: 28px; 
+    font-weight: 500; 
+    font-size: 15px;
+    transition: color 0.2s ease;
+} 
+
+.menu-navegacao a:hover { 
+    color: #2563eb; 
+} 
+
+
+.hero { 
+    padding: 60px 20px; 
+    max-width: 1200px;
+    margin: 0 auto;
+} 
 
 .apresentacao { 
-    background-color: #0004ff; 
-    text-shadow: 2px 2px 4px #000000; 
-    text-transform: uppercase; 
+    background: linear-gradient(135deg, #1e3a8a, #2563eb); 
     color: white; 
-    border-radius: 5px; 
-    padding: 30px;
+    border-radius: 16px; 
+    padding: 60px 40px; 
     text-align: center; 
-}
+    box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.2);
+} 
 
-.apresentacao h1 {
-    font-size: 28px;
-    margin-bottom: 15px;
-}
+.apresentacao h1 { 
+    font-size: 36px; 
+    font-weight: 800;
+    margin-bottom: 16px; 
+    letter-spacing: -0.5px;
+} 
 
-.apresentacao p {
-    margin-bottom: 20px;
-}
+.apresentacao p { 
+    margin-bottom: 32px; 
+    font-size: 18px;
+    color: #bfdbfe;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+} 
 
 .btn-cadastro { 
-    background-color: #2bf052; 
-    color: #000000; 
-    padding: 10px 25px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px; 
-    display: inline-block;
-    text-transform: none;
-    text-shadow: none;
+    background-color: #ffffff; 
+    color: #2563eb; 
+    padding: 14px 32px; 
+    text-decoration: none; 
+    font-weight: 600; 
+    border-radius: 8px; 
+    display: inline-block; 
+    font-size: 15px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border: none; 
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 } 
 
-.conteudo-principal {
-    display: flex;
-    gap: 20px;
-    padding: 0 20px;
-    margin-bottom: 30px;
+.btn-cadastro:hover {
+    transform: translateY(-2px); 
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
-.menu-lateral {
-    width: 25%;
-}
+
+.conteudo-principal { 
+    display: flex; 
+    gap: 32px; 
+    padding: 0 20px; 
+    max-width: 1200px;
+    margin: 0 auto 60px auto; 
+} 
+
+
+.menu-lateral { 
+    width: 25%; 
+} 
 
 .categoria { 
-    background-color: #f9f5f5; 
-    height: 50px; 
-    font-size: 12px; 
-    border-radius: 5px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    color: #080808; 
-    margin-bottom: 10px; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: #ffffff; 
+    height: 54px; 
+    font-size: 14px; 
+    font-weight: 500;
+    border-radius: 10px; 
+    color: #475569; 
+    margin-bottom: 12px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-start; 
+    padding-left: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    border: 1px solid #e2e8f0;
+    cursor: pointer;
+    transition: all 0.2s ease;
 } 
+
+.categoria h3 {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.categoria:hover {
+    background-color: #f8fafc;
+    border-color: #cbd5e1;
+    color: #0f172a;
+}
 
 .categoria.carrinho, .categoria.ajuda { 
-    background-color: #1325ee; 
-    color: #f9f9f9; 
-    text-shadow: 1px 1px 2px #000;
+    background-color: #2563eb; 
+    color: #ffffff; 
+    border: none;
 } 
 
-.catalogo-produtos {
-    width: 75%;
-    background-color: #f2f2f7;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+.categoria.carrinho:hover, .categoria.ajuda:hover { 
+    background-color: #1d4ed8; 
+    color: #ffffff;
+} 
+
+
+.catalogo-produtos { 
+    width: 75%; 
+    background-color: #ffffff; 
+    border: 1px solid #e2e8f0; 
+    border-radius: 16px; 
+    padding: 30px; 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+} 
+
+.catalogo-produtos h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 8px;
 }
 
-.grade-produtos {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 15px;
-    margin-top: 15px;
+.grade-produtos { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    gap: 24px; 
+    margin-top: 24px; 
+} 
+
+.produto-card { 
+    border: 1px solid #e2e8f0; 
+    padding: 16px; 
+    text-align: left; 
+    border-radius: 12px; 
+    background: #ffffff; 
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+} 
+
+.produto-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px -8px rgba(0, 0, 0, 0.15);
+    border-color: #cbd5e1;
 }
 
-.produto-card {
-    border: 1px solid #ddd;
-    padding: 15px;
-    text-align: center;
-    border-radius: 5px;
-    background: #ffffff;
+.produto-card img { 
+    width: 100%; 
+    height: 160px; 
+    object-fit: cover; 
+    border-radius: 8px; 
+    margin-bottom: 14px; 
+} 
+
+.produto-card h4 { 
+    color: #1e293b; 
+    font-size: 15px; 
+    font-weight: 600;
+    margin-bottom: 8px; 
+    line-height: 1.4;
+    text-transform: capitalize; 
+} 
+
+.preco { 
+    color: #16a34a; 
+    font-weight: 700; 
+    font-size: 18px; 
+    display: block; 
+    margin-top: 12px; 
+} 
+
+
+.secao-info { 
+    background-color: #ffffff; 
+    max-width: 1200px;
+    margin: 40px auto; 
+    padding: 40px; 
+    border-radius: 16px; 
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+} 
+
+.secao-info h2 { 
+    margin-bottom: 16px; 
+    color: #0f172a; 
+    font-size: 24px;
+    font-weight: 700;
+} 
+
+.secao-info p {
+    color: #64748b;
+    line-height: 1.6;
 }
 
-.produto-card img {
-    width: 100%;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 4px;
-    margin-bottom: 10px;
+
+#cadastro form {
+    display: flex; 
+    flex-direction: column; 
+    gap: 20px; 
+    max-width: 450px; 
+    margin-top: 24px;
 }
 
-.produto-card h4 {
-    color: #333;
+#cadastro .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+#cadastro label {
     font-size: 14px;
-    margin-bottom: 5px;
+    font-weight: 600;
+    color: #334155;
 }
 
-.preco {
-    color: #1e7b2e;
-    font-weight: bold;
-    font-size: 16px;
-    display: block;
-    margin-top: 8px;
+#cadastro input {
+    width: 100%; 
+    padding: 12px 16px; 
+    border: 1px solid #cbd5e1; 
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    color: #1e293b;
+    background-color: #f8fafc;
+    transition: all 0.2s ease;
 }
 
-.secao-info {
+#cadastro input:focus {
+    outline: none;
+    border-color: #2563eb;
     background-color: #ffffff;
-    margin: 20px;
-    padding: 25px;
-    border-radius: 5px;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
 }
 
-.secao-info h2 {
-    margin-bottom: 10px;
-    color: #1325ee;
-}
-
-.rodape {
-    background-color: #111;
-    color: #aaa;
+#cadastro .btn-cadastro {
+    background-color: #2563eb;
+    color: #ffffff;
+    margin-top: 8px;
+    width: 100%; 
     text-align: center;
-    padding: 20px;
-    font-size: 14px;
-    margin-top: 40px;
+}
+
+#cadastro .btn-cadastro:hover {
+    background-color: #1d4ed8;
+}
+
+
+.rodape { 
+    background-color: #0f172a; 
+    color: #94a3b8; 
+    text-align: center; 
+    padding: 40px 20px; 
+    font-size: 14px; 
+    margin-top: 80px; 
 }
